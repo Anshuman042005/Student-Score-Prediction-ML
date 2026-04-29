@@ -7,6 +7,8 @@ This project uses a Linear Regression model to predict student scores based on t
 ## 📌 Overview
 A simple machine learning project demonstrating how study hours affect student performance using supervised learning.
 
+This project demonstrates a basic supervised machine learning workflow including data preparation, model training, and prediction.
+
 ---
 
 ## 🚀 Features
