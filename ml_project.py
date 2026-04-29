@@ -28,30 +28,37 @@ def train_model(df):
     model.fit(X_train, y_train)
 
     accuracy = model.score(X_test, y_test)
-    print(f"\nModel Accuracy (R² Score): {accuracy:.2f}")
+    print(f"\n📈 Model Accuracy (R² Score): {accuracy:.2f}")
 
     return model
 
 
 def predict_score(model):
-    try:
-        hours = float(input("\nEnter study hours: "))
-        prediction = model.predict([[hours]])
-        print(f"\n📊 Predicted Score: {prediction[0]:.2f}")
-    except ValueError:
-        print("❌ Please enter a valid number.")
+    while True:
+        try:
+            hours = float(input("\nEnter study hours (or -1 to exit): "))
+            
+            if hours == -1:
+                print("Exiting...")
+                break
+
+            prediction = model.predict([[hours]])
+            print(f"📊 Predicted Score: {prediction[0]:.2f}")
+
+        except ValueError:
+            print("❌ Please enter a valid number.")
 
 
 def main():
-    print("\n===== STUDENT SCORE PREDICTION =====\n")
+    print("\n========== STUDENT SCORE PREDICTION ==========\n")
 
     df = load_data()
-    print("Dataset:\n", df)
+    print("📁 Dataset:\n", df)
 
     model = train_model(df)
     predict_score(model)
 
-    print("\n===== DONE =====\n")
+    print("\n========== PROGRAM ENDED ==========\n")
 
 
 if __name__ == "__main__":
