@@ -1,12 +1,32 @@
-# Student Score Prediction ML
+# 📊 Student Score Prediction using Machine Learning
 
-This project predicts student scores based on study hours using Linear Regression.
+This project uses a Linear Regression model to predict student scores based on the number of hours studied.
 
-## Tech Used
-- Python
-- Pandas
-- Scikit-learn
+---
 
-## Run
-pip install pandas scikit-learn  
-python ml_project.py
+## 📌 Overview
+A simple machine learning project demonstrating how study hours affect student performance using supervised learning.
+
+---
+
+## 🚀 Features
+- Data creation and preprocessing using Pandas  
+- Model training using Linear Regression  
+- Train-test split for evaluation  
+- Prediction based on user input  
+- Model accuracy calculation (R² score)  
+
+---
+
+## 🛠 Tech Stack
+- Python  
+- Pandas  
+- Scikit-learn  
+
+---
+
+## ▶️ How to Run
+
+### 1. Install dependencies
+```bash
+pip install pandas scikit-learn
